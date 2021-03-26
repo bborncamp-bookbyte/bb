@@ -44,7 +44,7 @@ class TestRequest(unittest.TestCase):
 
 # Number 3
     def test_authors(self):
-        bookInfo = json.load(urlopen("https://www.googleapis.com/books/v1/volumes?q=isbn:0131103628"))
+        bookInfo = json.load(urlopen("https://www.googleapis.com/books/v1/volumes?q=isbn:0131103628").decode("utf-8"))
         authors = bookInfo["items"][0]["volumeInfo"]["authors"]
         
         self.assertEqual('Brian W. Kernighan', authors[0])
