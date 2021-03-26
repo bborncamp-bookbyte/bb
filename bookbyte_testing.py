@@ -3,7 +3,7 @@ import threading
 import time
 import unittest
 import json
-from urllib.request import urlopen
+from urllib3.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
